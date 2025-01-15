@@ -19,6 +19,7 @@
     --equals-text:var(--text-white);
     --text-main: hsl(221, 14%, 31%);
     --text-white: hsl(0, 0%, 100%);
+    --chal-link:var(--text-white);
 }
 
 /* Theme 2 Variables */
@@ -37,6 +38,8 @@
     --equals-text:var(--text-white);
     --text-main: hsl(60, 10%, 19%);
     --text-white: hsl(0, 0%, 100%);
+    --chal-link:var(--text-main);
+
 }
 
 /* Theme 3 Variables */
@@ -56,6 +59,8 @@
     --text-main: hsl(198, 20%, 13%);
     --text-secondary:hsl(52, 100%, 62%);
     --text-white: hsl(0, 0%, 100%);
+    --chal-link:var(--text-secondary);
+
 }
 
 
@@ -97,5 +102,10 @@
     .btn-container{
         background-color:var(--bg-toggle);
     }
-    
+    .chal-link{
+        color: var(--chal-link);
+    }
+    .attribution{
+        color: var(--key-toggle-bg);
+    }
 }
