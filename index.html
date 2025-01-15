@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Use our free online calculator for quick and easy math calculations. Perfect for basic arithmetic, percentages, and more!">
+  <meta name="keywords" content="online calculator, math calculator, free calculator app, arithmetic calculator">
+  <meta name="author" content="Your Name or Brand">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/calc.png">
+  <link rel="stylesheet" href="./src/main.css">
+  <title>Online Calculator App | Free Basic Math Calculator</title>
+</head>
+
+<body>
+
+  <main class="flex justify-center items-center min-h-screen">
+    <section class="max-w-[400px] min-w-[250px] w-full p-4   rounded-md">
+      <div >
+        <!-- Start of the top section of calculator -->
+        <div class="flex justify-between items-center gap-4  mb-4 flex-wrap head-text">
+
+          <h1 class="sm:text-3xl font-bold">calc</h1>
+
+          <div class="flex items-end gap-4 ">
+            <h3 class="text-[0.8rem] font-bold">THEME</h3>
+            <div class="h-4 w-[3rem] sm:w-[5rem] sm:h-8 flex justify-between items-center toggle-bg rounded-2xl px-2">
+              <div class="rounded-full h-2 w-2 sm:h-4 sm:w-4  bg-[#d03f2f] theme-changer og-theme"></div>
+              <div class="rounded-full h-2 w-2 sm:h-4 sm:w-4 bg-[#ca5502] theme-changer second-theme opacity-0 "></div>
+              <div class="rounded-full h-2 w-2 sm:h-4 sm:w-4 bg-[#00e0d1] theme-changer third-theme opacity-0 "></div>
+            </div>
+          </div>
+
+        </div>
+        <!-- end of the top section of the calculator -->
+
+        <!-- Begginning of Calculator Display -->
+        <div class="calcDisplay h-20 w-full head-text rounded-md mb-4">
+          <div class="previous-operand   h-[50%] font-bold flex px-4 justify-end items-center sm:text-3xl">
+
+          </div>
+          <div class="current-operand  h-[50%]  font-bold flex px-4 justify-end items-center sm:text-3xl">
+
+          </div>
+        </div>
+        <!-- end of calculator display -->
+
+        <!-- beggingin of calculator button container -->
+        <div class="grid grid-cols-4 gap-4 p-4 btn-container rounded-md mb-4">
+
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>7</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>8</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>9</button>
+          <button
+            class="reset-delete font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] blue-btns"
+            data-delete>DEL</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>4</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>5</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>6</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-operation>+</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>1</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>2</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>3</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-operation>-</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>.</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-number>0</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-operation>/</button>
+          <button
+            class=" btn font-bold text-base esPhone:text-lg sm:text-xl text-center rounded-md p-2 min-w-[2.5rem] normie-btns"
+            data-operation>x</button>
+
+          <button
+            class="reset-delete text-center font-bold text-base esPhone:text-lg sm:text-xl col-span-2 rounded-md p-2 blue-btns "
+            data-reset>RESET</button>
+          <button
+            class="equals text-center font-bold text-base esPhone:text-lg sm:text-xl col-span-2 rounded-md p-2 equals-btn"
+            data-equals>=</button>
+
+        </div>
+        <!-- end of button container -->
+        <div class="attribution text-white font-bold">
+          Challenge by <a class="text-black" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="#">Rodney Madondo</a>.
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+  <script src="./src/main.js"></script>
+</body>
+
+</html>

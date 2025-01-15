@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default Theme Variables (Theme 1 as default) */
+:root {
+    --bg-main: hsl(222, 26%, 31%);
+    --bg-toggle: hsl(223, 31%, 20%);
+    --bg-screen: hsl(224, 36%, 15%);
+    --key-bg: hsl(225, 21%, 49%);
+    --key-shadow: hsl(224, 28%, 35%);
+    --key-toggle-bg: hsl(6, 63%, 50%);
+    --key-toggle-shadow: hsl(6, 70%, 34%);
+    --key-alt-bg: hsl(30, 25%, 89%);
+    --key-alt-shadow: hsl(28, 16%, 65%);
+    --header-text:hsl(0, 0%, 100%);
+    --btn-text:hsl(221, 14%, 31%);
+    --equals-text:var(--text-white);
+    --text-main: hsl(221, 14%, 31%);
+    --text-white: hsl(0, 0%, 100%);
+}
+
+/* Theme 2 Variables */
+.theme-2 {
+    --bg-main: hsl(0, 0%, 90%);
+    --bg-toggle: hsl(0, 5%, 81%);
+    --bg-screen: hsl(0, 0%, 93%);
+    --key-bg: hsl(185, 42%, 37%);
+    --key-shadow: hsl(185, 58%, 25%);
+    --key-toggle-bg: hsl(25, 98%, 40%);
+    --key-toggle-shadow: hsl(25, 99%, 27%);
+    --key-alt-bg: hsl(45, 7%, 89%);
+    --key-alt-shadow: hsl(35, 11%, 61%);
+    --header-text:hsl(60, 10%, 19%);
+    --btn-text:hsl(60, 10%, 19%);
+    --equals-text:var(--text-white);
+    --text-main: hsl(60, 10%, 19%);
+    --text-white: hsl(0, 0%, 100%);
+}
+
+/* Theme 3 Variables */
+.theme-3 {
+    --bg-main: hsl(268, 75%, 9%);
+    --bg-toggle: hsl(268, 71%, 12%);
+    --bg-screen: hsl(268, 71%, 12%);
+    --key-bg: hsl(281, 89%, 26%);
+    --key-shadow: hsl(285, 91%, 52%);
+    --key-toggle-bg: hsl(176, 100%, 44%);
+    --key-toggle-shadow: hsl(177, 92%, 70%);
+    --key-alt-bg: hsl(268, 47%, 21%);
+    --key-alt-shadow: hsl(290, 70%, 36%);
+    --header-text:var(--text-secondary);
+    --btn-text:var(--text-secondary);
+    --equals-text:var(--text-main);
+    --text-main: hsl(198, 20%, 13%);
+    --text-secondary:hsl(52, 100%, 62%);
+    --text-white: hsl(0, 0%, 100%);
+}
+
+
+@layer base{
+    body{
+        font-family: "League Spartan", serif;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+
+   
+    /* theme fixes */
+    body{
+        background-color: var(--bg-main);
+    }
+    .head-text{
+        color: var(--header-text);
+    }
+    .btn{
+        color:var(--btn-text);
+        background-color:var(--key-alt-bg);
+        box-shadow: 0 3px 1px 0 var(--key-alt-shadow) ;
+    }
+    .reset-delete{
+        color: var(--text-white);
+        background-color: var(--key-bg) ;
+        box-shadow: 0 3px 1px 0 var(--key-shadow);
+    }
+    .equals{
+        color: var(--equals-text) ;
+        background-color: var(--key-toggle-bg) ;
+        box-shadow: 0 3px 1px 0 var(--key-toggle-shadow);
+    }
+    .toggle-bg{
+        background-color: var(--bg-toggle);
+    }
+    .calcDisplay{
+        background-color: var(--bg-screen);
+    }
+    .btn-container{
+        background-color:var(--bg-toggle);
+    }
+    
+}
