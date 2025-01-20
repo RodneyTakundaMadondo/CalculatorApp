@@ -90,6 +90,34 @@ const currentOperandTextElement = document.querySelector(".current-operand");
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
 
+window.addEventListener("keydown", (e) => {
+    // lets get the value of the keyboard buttons we click 
+    console.log(e.key)
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    const operator = ["-", "+", "/", "x"];
+    const del = "backspace";
+    const equal = "enter";
+    console.log(operator.includes(e.key, 0));
+    // if the button we clicked is included in our array we should allow the value of that button to be appended
+
+    if (numbers.includes(Number(e.key), 0)) {
+        calculator.appendNumber(e.key);
+        calculator.updateDisplay();
+
+    } else if(operator.includes(e.key,0)){
+        calculator.chooseOperation(e.key);
+        calculator.updateDisplay();
+
+    }else if(e.key.toLowerCase() === del){
+        calculator.delete();
+        calculator.updateDisplay();
+
+    }else if(e.key.toLowerCase() === "enter"){
+        calculator.compute();
+        calculator.updateDisplay();
+    }else{return}
+})
+
 numberButtons.forEach((button) => {
     button.addEventListener("click", () => {
         calculator.appendNumber(button.textContent);
@@ -134,6 +162,6 @@ themeChangers.forEach((toggle) => {
 
         } else if (toggle.classList.contains("third-theme")) {
             document.documentElement.classList.add("theme-3")
-        } else {return }
+        } else { return }
     })
 })
