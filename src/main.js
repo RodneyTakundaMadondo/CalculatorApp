@@ -11,7 +11,7 @@ class Calculator {
     }
     delete() {
         if (this.currentOperand === '') return;
-        this.currentOperand = this.currentOperand.substring(0, this.currentOperand.length - 1)
+        this.currentOperand = this.currentOperand.slice(0, - 1)
     }
     appendNumber(number) {
         if (number === '.' && this.currentOperand.toString().includes(".")) return;
@@ -95,7 +95,6 @@ window.addEventListener("keydown", (e) => {
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
     const operator = ["-", "+", "/", "x"];
     const del = "backspace";
-    const equal = "enter";
     // if the button we clicked is included in our arrays and strings we should allow the value of that button to be appended
 
     if (numbers.includes(Number(e.key), 0)) {
@@ -110,9 +109,6 @@ window.addEventListener("keydown", (e) => {
         calculator.delete();
         calculator.updateDisplay();
 
-    }else if(e.key.toLowerCase() === "enter"){
-        calculator.compute();
-        calculator.updateDisplay();
     }else{return}
 })
 
