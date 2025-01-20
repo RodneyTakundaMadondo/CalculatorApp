@@ -83,6 +83,9 @@
         background-color:var(--key-alt-bg);
         box-shadow: 0 3px 1px 0 var(--key-alt-shadow) ;
     }
+    .btn:active, .reset-delete:active, .equals:active{
+        transform: translateY(4px);
+    }
     .reset-delete{
         color: var(--text-white);
         background-color: var(--key-bg) ;
