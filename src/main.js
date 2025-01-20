@@ -92,13 +92,11 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 
 window.addEventListener("keydown", (e) => {
     // lets get the value of the keyboard buttons we click 
-    console.log(e.key)
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
     const operator = ["-", "+", "/", "x"];
     const del = "backspace";
     const equal = "enter";
-    console.log(operator.includes(e.key, 0));
-    // if the button we clicked is included in our array we should allow the value of that button to be appended
+    // if the button we clicked is included in our arrays and strings we should allow the value of that button to be appended
 
     if (numbers.includes(Number(e.key), 0)) {
         calculator.appendNumber(e.key);
